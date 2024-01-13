@@ -1,0 +1,528 @@
+/* USER ACCOUNT EDIT */
+.user-account-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 0 0 12px;
+}
+
+.user-account-header .user-account-profile-img {
+    height: 50px;
+    width: 50px;
+}
+
+.user-account-header .user-account-profile-img img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.user-account-header .user-account-username-email {
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+}
+
+.user-account-header .user-account-username-email .username {
+    position: relative;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    transition: var(--tran-all);
+}
+
+.user-account-header .user-account-username-email .username:hover {
+    text-decoration: underline;
+}
+
+.user-account-header a {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.user-account-header .user-account-username-email .email {
+    font-size: var(--fs-xxs);
+    font-weight: 400;
+    color: var(--primary-300);
+}
+/* ---------------------------------------------------------------------- */
+
+
+.user-account-container {
+    display: flex;
+}
+
+.user-account-sidebar {
+    min-width: 20%;
+    padding: 24px 16px;
+    border-right: 2px solid gray;
+}
+
+.user-account-sidebar .sidebar-menu {
+    list-style: none;
+}
+
+.user-account-sidebar .sidebar-menu .sidebar-menu-links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: var(--fs-xxs);
+    border-radius: 8px;
+    padding: 4px;
+    margin: 8px 0;
+    transition: all .2s ease;
+}
+
+.sidebar-menu-links .active-indicator.active {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    height: 100%;
+    width: 1.5%;
+    background: var(--accent-100);
+    border-radius: 20%;
+}
+
+.user-account-sidebar .sidebar-menu .sidebar-menu-links:hover,
+.user-account-sidebar .sidebar-menu .sidebar-menu-links:focus {
+    background: #f5f5f5;
+}
+
+.user-account-sidebar .sidebar-menu .sidebar-menu-links.active {
+    background: #f5f5f5;
+}
+
+.user-account-sidebar .sidebar-menu .sidebar-menu-links span {
+    font-size: calc(var(--fs-sm) - 5px);
+    color: var(--primary-300);
+    padding: 0 8px;
+}
+
+.user-account-container form {
+    display: none;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.user-account-container form.active {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    width: 50%;
+}
+
+.user-account-profile {
+    /* width: 30%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-account-profile #selectedFileName {
+    font-size: var(--fs-xxs);
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.profile .user-account-profile #errorHandler {
+    font-size: var(--fs-xxs);
+    width: 200px;
+    white-space: wrap;
+    text-align: center;
+}
+
+.user-account-profile .user-account-profile-img {
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.user-account-profile .user-account-profile-img img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-account-profile .user-account-profile-img #uploadLink {
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: var(--fs-xxs);
+    color: #fff;
+    text-decoration: none;
+    background: var(--primary-200);
+    padding: 3px 7px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    transition: all .4s ease;
+}
+
+.user-account-profile .user-account-profile-img #uploadLink:hover {
+    box-shadow: 0 0 0 0.25rem #25242280
+}
+
+.user-account-profile .user-account-profile-img #uploadLink span {
+    font-size: var(--fs-xs);
+}
+
+.user-account-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.user-account-container {
+    height: 100%;
+    width: 100%;
+}
+
+/* -------------------------------------- */
+
+.manage-account .user-account-delete {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.user-account-container .user-account-delete .verify {
+    font-size: var(--fs-xxs);
+}
+
+.user-account-container .user-account-delete .verify i {
+    font-weight: 600;
+}
+
+/* -------------------------------------- */
+.user-account-update-password {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+form.ordered-history {
+    width: 80%;
+    max-width: 80%;
+}
+
+.ordered-history-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 0 0 24px;
+    height: 550px;
+    overflow-y: auto;
+}
+
+.ordered-list-item {
+    border-radius: 16px;
+    background: #f7f7f7;
+    margin: 8px 0;
+    /* box-shadow: 0px 10px 45px #1b1b1b0f; */
+    /* border: 2px solid gray */
+    /* box-shadow: 0px 4px 5px 0px #3333331a; */
+}
+
+.ordered-history-header {
+    padding: 16px;
+    /* border-bottom: 2px solid gray;; */
+}
+
+.ordered-history-header p {
+    font-weight: 600;
+}
+
+.ordered-header-datetime span, 
+.ordered-header-totalamount span, 
+.ordered-header-shippingfee span {
+    font-weight: 400;
+}
+
+.ordered-header-totalamount {
+    font-size: var(--fs-sm);
+}
+
+.ordered-item-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 16px;
+    padding: 16px;
+    transition: all .3s ease;
+    height: 0%;
+}
+
+.ordered-item {
+    display: flex;
+    align-items: center;
+    /* margin: 16px 0; */
+}
+
+
+.ordered-item-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    min-height: 80px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.ordered-item-image a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.ordered-item-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.ordered-item-details {
+    padding: 0 8px;
+}
+
+.ordered-item-modelname {
+    font-weight: 600;
+    width: 180px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------- */
+
+.pop-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #0a0a0a41;
+    z-index: 2;
+}
+
+.confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40%;
+    min-width: 25%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 40px 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.status-icon {
+    height: 100px;
+    width: 100px;
+    background: var(--btn-update);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    animation: success 1s linear infinite;
+}
+
+.status-icon span {
+    font-size: var(--fs-3xl);
+}
+
+@keyframes success {
+    0% {
+        box-shadow: 0 0 0 0px var(--btn-update);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0.75rem #00000000;
+    }
+}
+
+.confirm-dialog .status-message {
+    text-align: center;
+}
+
+.confirm-dialog .status-message h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.confirm-dialog .btn-wrapper {
+    text-align: right;
+}
+
+.confirm-button {
+    width: 80%;
+}
+
+.confirm-button button {
+    font-size: var(--fs-xs);
+    padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    color: #fff;
+    background: var(--btn-update);
+    border: none;
+    outline: none;
+    transition: all .2s ease-in-out;
+}
+
+.confirm-button button:hover, 
+.confirm-button button:focus {
+    background: #109d48;
+    box-shadow: 0 0 0 0.25rem #109d4880;
+}
+
+
+
+
+
+/* ----------------------------- */
+/* ADD BAG POP */
+
+.bag-item-add-card {
+    position: fixed;
+    top: 30%;
+    left: 87%;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: space-between;
+    max-height: 40%;
+    max-width: 25%;
+    min-height: 40%;
+    min-width: 25%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+
+.bag-item-add-card .status-message {
+    overflow-y: auto;
+}
+
+.bag-item-add-card .status-message .asd {
+    display: flex;
+}
+
+.bag-item-add-card .status-message .asd p:nth-child(1) {
+    width: 70%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.confirm-dialog .status-message h4 {
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.confirm-dialog .btn-wrapper {
+    text-align: right;
+}
+
+.bag-item-add-card-action {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.bag-item-add-card-action button[name="done"] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-200);
+    width: 30%;
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    border: 2px solid var(--primary-200);
+    background: none;
+    transition: all .3s ease;
+}
+
+.bag-item-add-card-action button[name="done"]:hover, 
+.bag-item-add-card-action button[name="done"]:focus {
+    box-shadow: 0 0 0 0.25rem #2c333380;
+}
+
+.bag-item-add-card-action button[name="done-success"] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    justify-content: center;
+    color: white;
+    width: 70%;
+    border-radius: 4px;
+    margin-left: 8px;
+    border: none;
+    background: var(--primary-200);
+    transition: all .3s ease;
+}
+
+.bag-item-add-card-action button[name="done-success"]:hover, 
+.bag-item-add-card-action button[name="done-success"]:focus {
+    background: var(--primary-200);
+    box-shadow: 0 0 0 0.25rem #2c333380;
+}
